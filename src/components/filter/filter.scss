@@ -1,0 +1,68 @@
+.filter {
+  display: inline-block;
+  position: relative;
+  border-radius: 5px;
+  width: 232px;
+  background: #fff;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  &__title {
+    padding: 20px 20px 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  &__check-icon {
+    position: absolute;
+    left: 27px;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item-checkbox {
+    padding: 10px 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      border-radius: 5px;
+      padding-bottom: 15px;
+    }
+    &:checked {
+      color: tomato;
+    }
+    &:hover {
+      background: #f1fcff;
+    }
+    & label {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    & span {
+      margin-left: 25px;
+      color: rgba(74, 74, 74, 1);
+    }
+    & input {
+      opacity: 0;
+      & + label::before {
+        position: absolute;
+        margin-right: 10px;
+        left: -11px;
+        content: '';
+        border: 1px solid rgba(154, 187, 206, 1);
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        border-radius: 2px;
+      }
+      &:checked + label::before {
+        content: '';
+        border: 1px solid rgba(33, 150, 243, 1);
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        border-radius: 2px;
+      }
+    }
+  }
+}

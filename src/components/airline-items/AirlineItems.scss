@@ -1,0 +1,50 @@
+.airlines {
+  &__item {
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+  }
+  &__item-header {
+    & h2 {
+      color: rgba(33, 150, 243, 1);
+    }
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-options {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    & div:last-child {
+      margin-right: 50px;
+    }
+  }
+  &__item-wrapper {
+    justify-items: start;
+  }
+  &__item-title {
+    font-size: 12px;
+    color: rgba(160, 176, 185, 1);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &__item-desc {
+    color: #000;
+    font-size: 14px;
+  }
+  &__button {
+    width: 100%;
+    border: none;
+    background-color: rgba(33, 150, 243, 1);
+    border-radius: 5px;
+    padding: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+}

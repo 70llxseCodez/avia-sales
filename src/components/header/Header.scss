@@ -1,0 +1,9 @@
+.header__logotype {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  & img {
+    width: 60px;
+    height: 60px;
+  }
+}

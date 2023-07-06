@@ -1,0 +1,28 @@
+.categories {
+  width: 502px;
+  display: flex;
+  &__button-active {
+    background-color: rgba(33, 150, 243, 1);
+    color: #fff;
+    border: 1px solid rgba(33, 150, 243, 1);
+  }
+  &__button {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid rgba(223, 229, 236, 1);
+  }
+  & button {
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+      border-right: none;
+    }
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+      border-left: none;
+    }
+  }
+}
