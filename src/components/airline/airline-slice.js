@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const searchId = '5ed66d64ad9467ae9536ac8891787f24';
+const searchId = '3c389baa024313377ad789b5d5bae79a';
 
 export const getAirlines = createAsyncThunk('@@airlines/getitems', async (_, { rejectWithValue }) => {
   try {
