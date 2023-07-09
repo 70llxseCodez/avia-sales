@@ -1,9 +1,15 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const searchId = '3b1df86796b3cae8256caf45f496a37e';
+// const searchId = '3b1df86796b3cae8256caf45f496a37e';
+const generatorSearchId = async () => {
+  const res = await fetch('https://aviasales-test-api.kata.academy/search');
+  const data = await res.json();
+  return data.searchId;
+};
 
 export const getAirlines = createAsyncThunk('@@airlines/getitems', async (_, { rejectWithValue }) => {
   try {
+    const searchId = await generatorSearchId();
     const res = await fetch(`https://aviasales-test-api.kata.academy/tickets?searchId=${searchId}`);
     if (!res.ok) {
       throw new Error('something went wrong');
